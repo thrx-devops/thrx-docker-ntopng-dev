@@ -7,6 +7,11 @@ RUN apt-get update && \
     dpkg -i apt-ntop.deb && \
     apt-get clean all
 
+# install libjson-c-dev maybe temp bugfix?
+RUN apt-get update && \
+    apt-get -y install libjson-c-dev \
+    --fix-missing
+
 RUN apt-get update && \
     apt-get -y install ntopng \
     --fix-missing
