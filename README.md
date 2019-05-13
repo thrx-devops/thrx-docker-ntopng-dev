@@ -8,7 +8,8 @@
     --restart always \
     --net=host \
     --name thrx-ntopng-dev \
-    -t -i -v \
+    -e NTOPNG_OPTIONS="--http-prefix /ntopng" \
+    -t -i \
     thrx/thrx-ntopng-dev 
 ```
 
@@ -22,7 +23,7 @@ https://www.ntop.org/guides/ntopng/cli_options.html
 
 Example:
 ```
--e NTOPNG_OPTIONS="--http-prefix /myntopng"
+-e NTOPNG_OPTIONS="--http-prefix /ntopng"
 ```
 
 ### Reverse Proxy
