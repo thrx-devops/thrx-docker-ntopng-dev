@@ -15,10 +15,22 @@
 ## Advanced usage
 
 
+### NTOPNG_OPTIONS
+
+Passing options to the nopng commandline:
+https://www.ntop.org/guides/ntopng/cli_options.html
+
+Example:
+```
+-e NTOPNG_OPTIONS="--http-prefix /myntopng"
+```
+
 ### Reverse Proxy
 
 add:
 ```
+--http-prefix /ntopng
+or
 ntopng -Z /ntopng
 ```
 
@@ -32,12 +44,12 @@ location /ntopng/ {
 }
 ```
 
-
 ```
 http://localhost:3000/ntopng/
 
 https://server/ntopng/
 ```
+
 
 ### Build from source code
 
